@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        >
+    <Grid>
+        <dxg:TreeListControl Name="treeListControl1" AutoPopulateColumns="True" ItemsSource="{Binding DataSource}">
+            <dxg:TreeListControl.View>
+                <dxg:TreeListView Name="treeListView1"
+                                      KeyFieldName="ID"
+                                      ParentFieldName="ParentID"/>
+
+            </dxg:TreeListControl.View>
+        </dxg:TreeListControl>
+    </Grid>
+</Window>
